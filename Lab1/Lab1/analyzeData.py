@@ -9,7 +9,7 @@ robot_time = data_robot['time'] # is time the title?
 robot_translation = data_robot['t_vecs']
 robot_rotation = data_robot['r_vecs']
 
-data_fly = h5py.File("data_flyTracks.h5","r")
+data_fly = h5py.File("data_flyTracksv0.h5","r")
 fly_time = data_fly['time']
 fly_x = data_fly['pos_x']
 fly_y = data_fly['pos_y']
@@ -27,7 +27,7 @@ robot_rz = robot_rotation[:,2]
 # example of plotting data
 fig = plt.figure(1)
 ax = fig.add_subplot(111, projection = '3d')
-ax.scatter(robot_x, robot_y, robot_z)
+ax.scatter(robot_rx, robot_ry, robot_rz)
 
 fig2 = plt.figure(2)
 # preliminary fly data analysis
